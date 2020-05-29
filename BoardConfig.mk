@@ -31,15 +31,15 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Bootloader
-PRODUCT_PLATFORM := kona
-TARGET_BOOTLOADER_BOARD_NAME := kona
+PRODUCT_PLATFORM := sm6150
+TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
-TARGET_BOARD_PLATFORM := kona
+TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
-QCOM_BOARD_PLATFORMS += kona
+QCOM_BOARD_PLATFORMS += sm6150
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket
@@ -71,7 +71,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 #TARGET_USE_SDCLANG := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := umi
+TARGET_OTA_ASSERT_DEVICE := phoenix
 
 # Avb
 BOARD_AVB_ENABLE := true
@@ -81,7 +81,7 @@ BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_FLASH_BLOCK_SIZE := 262144
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728
 
 # Dynamic Partition
 BOARD_SUPER_PARTITION_SIZE := 9126805504
@@ -100,11 +100,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
-
-#Init
-# TARGET_INIT_VENDOR_LIB := libinit_umi
-# TARGET_RECOVERY_DEVICE_MODULES := libinit_umi
-# TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true

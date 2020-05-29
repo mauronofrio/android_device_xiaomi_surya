@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_umi.mk
+    $(LOCAL_DIR)/omni_phoenix.mk
 
-COMMON_LUNCH_CHOICES := omni_umi-eng
+COMMON_LUNCH_CHOICES := omni_phoenix-eng
