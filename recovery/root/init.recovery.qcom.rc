@@ -86,8 +86,17 @@ service keymaster-4-0 /sbin/android.hardware.keymaster@4.0-service-qti
     disabled
     seclabel u:r:recovery:s0
 
+service unified-script /sbin/unified-script.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 on boot
     setprop sys.usb.config adb
+    chmod 0777 /sbin/unified-script.sh
+    start unified-script
 
 on property:crypto.ready=0
     stop sbinqseecomd
