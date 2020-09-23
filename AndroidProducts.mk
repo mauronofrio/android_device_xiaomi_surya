@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_monet.mk
+    $(LOCAL_DIR)/omni_surya.mk
 
-COMMON_LUNCH_CHOICES := omni_monet-eng
+COMMON_LUNCH_CHOICES := omni_surya-eng

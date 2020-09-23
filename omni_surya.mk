@@ -15,8 +15,8 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := monet
-DEVICE_PATH := device/xiaomi/monet
+PRODUCT_RELEASE_NAME := surya
+DEVICE_PATH := device/xiaomi/surya
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
@@ -26,10 +26,10 @@ $(call inherit-product, vendor/omni/config/common.mk)
 #PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := monet
-PRODUCT_NAME := omni_monet
+PRODUCT_DEVICE := surya
+PRODUCT_NAME := omni_surya
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 10 Lite
+PRODUCT_MODEL := Poco X3
 PRODUCT_MANUFACTURER := Xiaomi
 
 # HACK: Set vendor patch level
