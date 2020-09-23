@@ -1,6 +1,6 @@
-ro.display.series=Poco X2
-ro.product.board=sm6150
-ro.board.platform=sm6150
+ro.display.series=Mi 10 Lite
+ro.product.board=lito
+ro.board.platform=lito
 sys.usb.controller=a600000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
